@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación: Arquitectura Occidental Europea</title>
+    <style>
+        /* Estilos base con paleta sobria de arquitectura (Mármol, terracota y grafito) */
+        body {
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+            background-color: #f5f2eb; /* Tono mármol/arena */
+            color: #2c3e50;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .tarjeta {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            margin-bottom: 25px;
+            border-top: 4px solid #b37d4e; /* Detalle terracota */
+        }
+        h1 { text-align: center; color: #1a252f; margin-bottom: 5px; font-weight: 600; }
+        .subtitulo { text-align: center; color: #7f8c8d; margin-bottom: 30px; font-size: 0.95em; }
+        h2 { color: #1a252f; border-bottom: 1px solid #ecf0f1; padding-bottom: 10px; margin-top: 0; }
+        .pregunta { margin-bottom: 25px; padding-bottom: 15px; }
+        .pregunta p { font-weight: 600; margin-bottom: 12px; }
+        .opciones label {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+        .opciones label:hover { background: #edf2f7; }
+        .opciones input { margin-right: 10px; }
+        
+        button {
+            background-color: #b37d4e;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        button:hover { background-color: #96643b; }
+
+        /* Contenedor de respuestas oculto al inicio */
+        #seccion-respuestas {
+            display: none;
+            border-top: 4px solid #2ecc71;
+        }
+        .resultado-texto {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #e8f8f5;
+            border-radius: 6px;
+            color: #27ae60;
+        }
+        .retroalimentacion {
+            margin-bottom: 15px;
+            padding: 12px;
+            border-left: 4px solid #34495e;
+            background: #fdfefe;
+        }
+        
+        /* Estilos para la calificación visual */
+        .opcion-correcta {
+            background-color: #d4edda !important;
+            border-color: #c3e6cb !important;
+            color: #155724 !important;
+            font-weight: bold;
+        }
+        .opcion-incorrecta {
+            background-color: #f8d7da !important;
+            border-color: #f5c6cb !important;
+            color: #721c24 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ARQUITECTURA OCCIDENTAL EUROPEA</h1>
+    <div class="subtitulo">Cuestionario Interactivo de Autoevaluación — Equipo 5</div>
+
+    <!-- Bloque del Cuestionario -->
+    <div class="tarjeta">
+        <h2>Cuestionario de Comprensión</h2>
+        <form id="quizForm">
+            
+            <!-- Pregunta 1 -->
+            <div class="pregunta" id="p1-block">
+                <p>1. ¿Qué hito constructivo e ingenieril de Filippo Brunelleschi revolucionó la arquitectura renacentista al edificarse sin cimbras de madera tradicionales?</p>
+                <div class="opciones">
+                    <label><input type="radio" name="p1" value="A"> A) La fachada del Palacio Pitti.</label>
+                    <label><input type="radio" name="p1" value="B"> B) La cúpula de Santa Maria del Fiore.</label>
+                    <label><input type="radio" name="p1" value="C"> C) El diseño de la Biblioteca Laurenciana.</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="pregunta" id="p2-block">
+                <p>2. Según el tratado "De re aedificatoria" de Leon Battista Alberti y los principios humanistas, ¿cuál fue una prioridad en el diseño de las iglesias del Renacimiento italiano a diferencia del Gótico?</p>
+                <div class="opciones">
+                    <label><input type="radio" name="p2" value="A"> A) La verticalidad monumental y el uso de contrafuertes exteriores.</label>
+                    <label><input type="radio" name="p2" value="B"> B) La asimetría de las fachadas y la ornamentación sobrecargada.</label>
+                    <label><input type="radio" name="p2" value="C"> C) La horizontalidad, la claridad espacial y la geometría centralizada basada en el ser humano.</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="pregunta" id="p3-block">
+                <p>3. ¿Qué característica constructiva y formal define el acabado exterior de las fachadas de los Palacios del Renacimiento florentino (como el Médici Riccardi o Strozzi) dando una apariencia de fortaleza urbana?</p>
+                <div class="opciones">
+                    <label><input type="radio" name="p3" value="A"> A) El uso de almohadillado y rusticación en la piedra.</label>
+                    <label><input type="radio" name="p3" value="B"> B) El revestimiento total con estuco liso y trampantojos.</label>
+                    <label><input type="radio" name="p3" value="C"> C) Grandes vidrieras con arcos apuntados góticos.</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="pregunta" id="p4-block">
+                <p>4. Durante la Contrarreforma en el siglo XVI, ¿qué obra arquitectónica de Giacomo della Porta se convirtió en el modelo de iglesia jesuita exportado a todo el mundo?</p>
+                <div class="opciones">
+                    <label><input type="radio" name="p4" value="A"> A) San Pietro in Montorio.</label>
+                    <label><input type="radio" name="p4" value="B"> B) La Iglesia del Gesù en Roma.</label>
+                    <label><input type="radio" name="p4" value="C"> C) San Carlo alle Quattro Fontane.</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div class="pregunta" id="p5-block">
+                <p>5. De acuerdo con la tabla comparativa final de tu documento, ¿cuál es la relación con la luz y la función dominante de la Arquitectura Eclesiástica italiana del Siglo XVI?</p>
+                <div class="opciones">
+                    <label><input type="radio" name="p5" value="A"> A) Luz equilibrada/racional y función puramente estética.</label>
+                    <label><input type="radio" name="p5" value="B"> B) Iluminación natural interior y función civil/residencial.</label>
+                    <label><input type="radio" name="p5" value="C"> C) Luz dramática/simbólica y función religiosa/propagandística.</label>
+                </div>
+            </div>
+
+            <button type="button" onclick="evaluarCuestionario()">Enviar y Revelar Respuestas</button>
+        </form>
+    </div>
+
+    <!-- Bloque de Respuestas (Oculto al inicio) -->
+    <div id="seccion-respuestas" class="tarjeta">
+        <h2>Resultados del Cuestionario</h2>
+        <div id="calificacion" class="resultado-texto"></div>
+        
+        <h3>Retroalimentación Técnica:</h3>
+        <div class="retroalimentacion">
+            <strong>Pregunta 1 (B):</strong> La cúpula de Santa Maria del Fiore (1418) de Brunelleschi es una obra maestra de ingeniería que se auto-soportó durante su construcción sin estructuras de madera intermedias.
+        </div>
+        <div class="retroalimentacion">
+            <strong>Pregunta 2 (C):</strong> El humanismo renacentista desplazó la verticalidad mística del gótico para centrarse en proporciones matemáticas basadas en la escala humana, buscando la claridad y la simetría.
+        </div>
+        <div class="retroalimentacion">
+            <strong>Pregunta 3 (A):</strong> El almohadillado rústico de piedra confería a los palacios burgueses un aspecto defensivo y monumental hacia el exterior, albergando residencias de lujo y patios armónicos por dentro.
+        </div>
+        <div class="retroalimentacion">
+            <strong>Pregunta 4 (B):</strong> La Iglesia del Gesù en Roma respondió a las demandas del Concilio de Trento, priorizando una gran nave única para la predicación masiva, sirviendo de prototipo global.
+        </div>
+        <div class="retroalimentacion">
+            <strong>Pregunta 5 (C):</strong> Como indica la tabla comparativa, el siglo XVI transiciona hacia el Barroco, utilizando la luz de forma teatral y dramática con fines de propaganda e impacto espiritual.
+        </div>
+    </div>
+
+    <script>
+        function evaluarCuestionario() {
+            // Respuestas correctas esperadas
+            const claves = { p1: "B", p2: "C", p3: "A", p4: "B", p5: "C" };
+            let aciertos = 0;
+            const totalPreguntas = 5;
+
+            // Limpiar estilos previos en caso de que lo vuelvan a hacer
+            const todasLasOpciones = document.querySelectorAll('.opciones label');
+            todasLasOpciones.forEach(lbl => lbl.className = '');
+
+            // Validar y pintar cada pregunta
+            for (let i = 1; i <= totalPreguntas; i++) {
+                const name = 'p' + i;
+                const seleccionada = document.querySelector(`input[name="${name}"]:checked`);
+                const respuestaCorrecta = claves[name];
+
+                // Buscar todas las etiquetas de opción para esta pregunta específica
+                const opcionesPregunta = document.querySelectorAll(`#${name}-block .opciones label`);
+
+                opcionesPregunta.forEach(label => {
+                    const input = label.querySelector('input');
+                    // Resaltar la respuesta correcta siempre en verde
+                    if (input.value === respuestaCorrecta) {
+                        label.classList.add('opcion-correcta');
+                    }
+                    // Si el usuario seleccionó una incorrecta, pintarla en rojo
+                    if (seleccionada && seleccionada.value === input.value && seleccionada.value !== respuestaCorrecta) {
+                        label.classList.add('opcion-incorrecta');
+                    }
+                });
+
+                // Contar aciertos
+                if (seleccionada && seleccionada.value === respuestaCorrecta) {
+                    aciertos++;
+                }
+            }
+
+            // Mostrar el bloque de resultados
+            const seccionRespuestas = document.getElementById('seccion-respuestas');
+            const mensajeCalificacion = document.getElementById('calificacion');
+            
+            mensajeCalificacion.innerText = `¡Cuestionario Terminado! Calificación: ${aciertos} de ${totalPreguntas} respuestas correctas.`;
+            seccionRespuestas.style.display = 'block';
+            
+            // Scroll automático y suave hacia las respuestas
+            seccionRespuestas.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
